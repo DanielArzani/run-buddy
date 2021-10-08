@@ -77,3 +77,9 @@ footer div {
 footer a {
     color: #024e76;
 }
+
+
+section{
+    padding: 60px;
+    background-image: url(/Users/danielarzanipour/Documents/BootCamp/weekoneANDintro/Virtual-Class-One/run-buddy/images/hero-bg.jpeg);
+}
