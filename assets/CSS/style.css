@@ -81,5 +81,4 @@ footer a {
 
 section{
     padding: 60px;
-    background-image: url(/Users/danielarzanipour/Documents/BootCamp/weekoneANDintro/Virtual-Class-One/run-buddy/images/hero-bg.jpeg);
-}
+    background-image: url(../../images/hero-bg.jpeg);}
