@@ -57,7 +57,7 @@ header nav ul li {
 
                                             /*   HERO SECTION */
 
-
+/* Hero image */
 .hero{
     background-image: url(../../images/hero-bg.jpeg);
     height: 600px;
@@ -66,6 +66,7 @@ header nav ul li {
     position: relative;
 }
     
+/* Container of the form */
 .hero-form{
     color: #024e76;
     background-color: #fce138;
@@ -81,15 +82,18 @@ header nav ul li {
 
 }
 
+/* Title at the top of the form */
 .hero-form h3 {
     font-size: 24px;
     margin: 0;
 }
 
+/* Paragraph right under the title */
 .hero-form p {
     margin: 5px 0 15px 0;
 }
 
+/* Three inputs boxes */
 .form-input {
     border: 1px solid #024e76;
     display: block;
@@ -100,10 +104,12 @@ header nav ul li {
     margin-bottom: 15px;
 }
 
+/* Labels of the three input boxes */
 .hero-form label {
     margin: 0 5px;
 }
 
+/* Input button */
 .hero-form button {
     color: #fce138;
     background-color: #024e76;
