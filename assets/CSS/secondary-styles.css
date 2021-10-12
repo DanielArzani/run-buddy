@@ -1,0 +1,53 @@
+                                      /* PRIVACY POLICY SECTION */
+
+/* Hero Section */
+.hero {
+    background-position: bottom;
+    height: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .hero-secondary {
+    background-color: black;
+    color: red;
+  }
+
+/* Page Title - Privacy Policy */
+.page-title{
+    border-bottom: 4px solid #fce138;
+    color: #fce138;
+    display: inline-block;
+    font-weight: normal;
+    font-size: 42px;
+    font-style: italic;
+    padding: 0 80px 15px 80px;
+}
+
+/* Article Section */
+/* Targets <p> and <h3> elements within the article section */
+.secondary-content {
+    color: #024e76;
+    margin: 0 auto 0 auto;
+    width: 80%;
+}
+/* Targets only the <h3> elements */
+.secondary-content h3 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+/* Targets only the <p> elements */
+.secondary-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto 0 auto;
+}
+/* Targets the <ul> elements */
+.secondary-content ul {
+    margin: 15px 20px;
+}
+/* Targets the <li> elements */
+.secondary-content li {
+    color: #39a6b2;
+    margin: 10px 0;
+}
