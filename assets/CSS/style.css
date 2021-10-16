@@ -46,15 +46,14 @@ section{
 
 /* LOGO */
 header{
-    padding: 20px 35px;
     background-color: #39a6b2;
-   
-}
-header h1 {
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 35px;   
 }
 
-header h1 a {
+header h1 a{
     font-weight: bold;
     font-size: 36px;
     color: #fce138; /*in lesson 1.2.7. This doesn't work because it the <a> won't accept it*/
@@ -69,7 +68,6 @@ header a {
 }
 
 header nav {
-    float: right;
     margin: 7px 0;
 }
 
