@@ -18,10 +18,11 @@ section{
 .section-title {
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    display: inline-block;
     border-bottom: 3px solid;
+    margin: 0 auto 35px auto;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 50%;
 }
   
                                                 /* UTILITY CLASSES */
@@ -40,6 +41,10 @@ section{
 
 .text-right {
     text-align: right;
+}
+
+.flex-row {
+    display: flex;
 }
 
                                                 /* HEADER SECTION */
@@ -166,11 +171,6 @@ header nav ul li a {
 
                                             /* "WHAT WE DO" SECTION */
 
-.intro {
-    text-align: center;
-}
-
-
 
 .intro p {
     line-height: 1.7;
@@ -178,6 +178,7 @@ header nav ul li a {
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -185,7 +186,6 @@ header nav ul li a {
                                             /* "WHAT YOU DO" SECTION */
 
 .steps {
-  text-align: center;
   background: #fce138;
 }
 
@@ -218,7 +218,6 @@ header nav ul li a {
 
 /* Entire trainers section */
 .trainers {
-    text-align: center;
 }
 
 /* Article Section */
@@ -263,7 +262,6 @@ header nav ul li a {
 
                                             /* REACH OUT SECTION */
 .contact {
-    text-align: center;
     background: #024e76;
 }
 
