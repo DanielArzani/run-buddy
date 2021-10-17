@@ -55,7 +55,17 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px 35px;   
+    padding: 20px 35px; 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;  
+    /* Taken from .hero  */
+    background-image: url("../../images/hero-bg.jpeg");
+    background-size: cover;
+    background-position: center;
+    /* Makes header and hero match */
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 header h1 a{
@@ -63,6 +73,7 @@ header h1 a{
     font-size: 36px;
     color: #fce138; /*in lesson 1.2.7. This doesn't work because it the <a> won't accept it*/
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     
 }
 
@@ -82,7 +93,7 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul li a {
@@ -90,6 +101,14 @@ header nav ul li a {
     font-size: 1.55vw;
     padding: 10px 15px;
 }
+
+header nav ul li a:hover {
+    background: #fce138;
+    border-radius: 15px;
+    color: #024e76;
+    text-shadow: none;
+}
+
 
                                             /*   HERO SECTION */
 
@@ -102,6 +121,9 @@ header nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* Makes header and hero match */
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 .hero-cta {
@@ -117,19 +139,21 @@ header nav ul li a {
     color: #fce138;
     font-size: 55px;
     font-style: italic;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
     
 /* Container of the form */
 .hero-form{
     color: #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8); /* a = alpha = transparency where 0.8 = 80%, equivlanet is opacity */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-style: solid;
     border-width: 3px;
     border-color: #024e76;
     margin: 3.5%;
     width: 40%;
-
 
 }
 
@@ -146,13 +170,21 @@ header nav ul li a {
 
 /* Three inputs boxes */
 .form-input {
+    background-color: rgba(225, 225, 225, .75);
     border: 1px solid #024e76;
+    border-radius: 15px;
     display: block;
     padding: 7px 15px;
     font-size: 16px;
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+}
+
+.form-input:focus {
+    background-color: rgba(225, 225, 225, 1);
+    /* Gets rid of blue border when you focus on inputs */
+    outline: none;
 }
 
 /* Labels of the three input boxes */
@@ -164,9 +196,14 @@ header nav ul li a {
 .hero-form button {
     color: #fce138;
     background-color: #024e76;
+    border-radius: 15px;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+  }
+
+  .hero-form button:hover {
+      background-color: #39a6b2;
   }
 
 
@@ -238,6 +275,10 @@ header nav ul li a {
     color: #024e76;
   }
 
+  .step:not(:last-child) {
+      /* Adds a bottom border to every step except the last one */
+      border-bottom: 1px solid #39a6b2;
+  }
 
                                             /* YOUR TRAINERS SECTION */
 
@@ -334,6 +375,7 @@ header nav ul li a {
 }
 
 .contact-form input, .contact-form textarea {
+    background-color: rgba(225, 225, 225, .75);
     border: 1px solid #024e76;
     color: #024e76;
     display: block;
@@ -344,14 +386,25 @@ header nav ul li a {
     width: 100%;
 }
 
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(225, 225, 225, 1);
+    outline: none;
+}
+
 .contact-form button {
     background: #fce138;
     border: none;
+    border-radius: 15px;
     color: #024e76;
     font-style: 16px;
     padding: 15px 0;
     text-align: center;
     width: 100%;
+}
+
+.contact-form button:hover {
+    background: #39a6b2;
+    color: #fce138;
 }
 
                                             /* FOOTER SECTION */
@@ -402,6 +455,9 @@ footer a {
     header {
         justify-content: center;
         padding-bottom: 0;
+        /* This undoes the sticky header effect */
+        position: relative;  
+
     }
 
     header h1 {
