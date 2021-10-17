@@ -1,3 +1,9 @@
+:root {
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -58,7 +64,8 @@ header{
     padding: 20px 35px; 
     position: -webkit-sticky;
     position: sticky;
-    top: 0;  
+    top: 0; 
+    z-index: 9999; 
     /* Taken from .hero  */
     background-image: url("../../images/hero-bg.jpeg");
     background-size: cover;
@@ -204,6 +211,79 @@ header nav ul li a:hover {
 
   .hero-form button:hover {
       background-color: #39a6b2;
+  }
+
+  /* Radio button and checkbox custom styles */
+  .checkbox-wrapper input, .radio-wrapper input {
+      /* Makes RB's and CB disappear */
+      opacity: 0;
+  }
+
+  .checkbox-wrapper label, .radio-wrapper label {
+      /* Preps the labels to make room for the custom input boxes
+      The boxes will also need to be absolutely positioned relative to their labels */
+      position: relative;
+      left: 10px;
+      margin: 10px;
+      line-height: 1.6;
+  }
+
+  .checkbox-wrapper label::before, .radio-wrapper label::before {
+      /* The ::before pseudo-class lets us place this custom box before anything else */
+      content: ""; /* What you put in here is displayed within the box */
+      height: 20px;
+      width: 20px;
+      background: rgba(225, 225, 225, .75);
+      border: 1px solid #024e76;
+      position: absolute;
+      top: -4px;
+      left: -30px;
+  }
+
+  .radio-wrapper label::before {
+      /* Will create a circular radio button */
+      border-radius: 50%;
+  }
+
+  /* After we click on radio buttons, these are used to create an angle the marks*/
+  .radio-wrapper label::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #024e76;
+      position: absolute;
+      left: -29px;
+      top: -3px;
+  }
+  .checkbox-wrapper label::after {
+      content: "";
+      height: 6px;
+      width: 14px;
+      border-left: 2px solid #024e76;
+      border-bottom: 2px solid #024e76;
+      position: absolute;
+      left:  -26px;
+      top: 1px;
+  }
+
+  /* Rotates mark to make itinto a checkmark */
+  .checkbox-wrapper label::after {
+      transform: rotate(-58deg);
+  }
+
+  /* Makes filled in circle look better */
+  .radio-wrapper label::after {
+      background-image: radial-gradient(circle, #39a6b2, #024e76);
+  }
+
+  /* Makes it so that when the real boxs are toggled, the ::after state comes about */
+  .checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
+     content: none;
+  }
+
+  .checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+      content: "";
   }
 
 
